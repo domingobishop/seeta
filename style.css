@@ -1,0 +1,37 @@
+/*
+Theme Name:     Blank Canvas
+Theme URI:      http://chrisbishop.me.uk/
+Description:    Child theme for the mixfolio theme 
+Author:         Chris Bishop
+Author URI:     http://chrisbishop.me.uk/
+Template:       mixfolio
+Version:        0.1.0
+License: Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/. Feel free to make any changes.
+*/
+
+@import url("../mixfolio/style.css");
+
+/* @group Normalize */
+
+/* @end */
+
+/* =Global
+-------------------------------------------------------------- */
+
+/*
+background: #e6e6e6 url('http://seetaindrani.com/wp-content/uploads/2013/10/Seeta_bg.jpg');background-repeat:no-repeat;background-position:right top;background-size:cover;
+*/
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

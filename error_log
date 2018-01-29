@@ -1,0 +1,10 @@
+[29-Feb-2016 21:17:22 UTC] PHP Fatal error:  Call to undefined function __() in /home/seetaind/public_html/wp-content/themes/blankcanvas/footer.php on line 31
+[13-Mar-2016 01:23:29 UTC] PHP Fatal error:  Call to undefined function __() in /home/seetaind/public_html/wp-content/themes/blankcanvas/footer.php on line 31
+[17-Oct-2017 04:24:40 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[17-Oct-2017 04:24:41 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[17-Oct-2017 23:51:30 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[17-Oct-2017 23:51:31 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[19-Oct-2017 19:16:18 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[19-Oct-2017 19:16:18 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[21-Oct-2017 08:58:16 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
+[21-Oct-2017 08:58:16 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/seetaind/public_html/wp-content/themes/blankcanvas/index.php on line 14
