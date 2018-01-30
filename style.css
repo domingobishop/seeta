@@ -69,6 +69,15 @@ License: Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.or
 	padding: 0 1em;
 }
 
+.home .home-item {
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+
+.home .home-grey {
+	background-color: #eee;
+}
+
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */

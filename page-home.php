@@ -38,19 +38,13 @@ get_header(); ?>
             <?php
 
             for ( $i=1 ; $i<=6 ; $i++ ) {
-                $title    = get_post_meta( $post->ID, 'title_'.$i, true );
-                $code     = get_post_meta( $post->ID, 'embed_code_'.$i, true );
-                $image    = get_post_meta( $post->ID, 'img_'.$i, true );
-                $excerpt  = get_post_meta( $post->ID, 'excerpt_'.$i, true );
-                $link     = get_post_meta( $post->ID, 'link_'.$i, true );
+                $title    = get_post_meta( $post->ID, 'si_home_title_'.$i, true );
+                $code     = get_post_meta( $post->ID, 'si_home_embed_code_'.$i, true );
+                $image    = get_post_meta( $post->ID, 'si_home_img_'.$i, true );
+                $excerpt  = get_post_meta( $post->ID, 'si_home_excerpt_'.$i, true );
+                $link     = get_post_meta( $post->ID, 'si_home_link_'.$i, true );
 
-                if ($i % 2) {
-                    // Odd
-
-                } else {
-                    // Even
-
-                }
+                echo home_section( $i, $title, $code );
             }
 
             endwhile; ?>

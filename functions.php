@@ -93,3 +93,56 @@ function home_meta_boxes() {
         }
     }
 }
+
+function home_section( $i, $title, $code ) {
+
+    if ($i % 2) {
+        // Odd
+        $html = '<section class="section-'.$i.' home-item">
+                <div class="si-row">
+                    <div class="si-col">
+                        <div class="si-content">
+                            <div class="videoWrapper">
+                                '.$code.'
+                            </div>
+                        </div>
+                    </div>
+                    <div class="si-col">
+                        <div class="si-content">
+                            <article>
+                                <div class="entry-header">
+                                    <h2>'.$title.'</h2>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>';
+    } else {
+        // Even
+        $html = '<section class="section-'.$i.' home-item home-grey">
+                <div class="si-row">
+                    <div class="si-col">
+                        <div class="si-content">
+                            <article>
+                                <div class="entry-header">
+                                    <h2>'.$title.'</h2>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="si-col">
+                        <div class="si-content">
+                            <div class="videoWrapper">
+                                '.$code.'
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>';
+    }
+
+    if ($title) {
+        return $html;
+    }
+}
