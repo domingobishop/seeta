@@ -2,6 +2,8 @@
 
 include 'create-metabox.php';
 
+add_action( 'init', 'home_meta_boxes' );
+
 function home_meta_boxes() {
 
     if (isset($_GET['post'])) {
@@ -15,11 +17,30 @@ function home_meta_boxes() {
     }
     if( !isset( $post_id ) ) return;
 
+    $home_meta_boxes = array(
+        array(
+            'id' => 'page_options',
+            'title' => 'Page options',
+            'pages' => 'page',
+            'context' => 'normal',
+            'priority' => 'high',
+            'fields' => array(
+                array(
+                    'name' => 'Header video embed code',
+                    'desc' => '',
+                    'id'   => 'si_home_main_embed_code',
+                    'type' => 'textarea',
+                    'std'  => ''
+                )
+            )
+        )
+    );
+
     for ( $i = 1; $i <= 6; $i ++ ) {
 
-        $home_meta_boxes =
+        $home_meta_boxes[] =
             array(
-                'id'       => 'home_'.$i,
+                'id'       => 'si_home_'.$i,
                 'title'    => 'Homepage section '.$i,
                 'pages'    => 'page',
                 'context'  => 'normal',
@@ -28,35 +49,35 @@ function home_meta_boxes() {
                     array(
                         'name' => 'Title',
                         'desc' => '',
-                        'id'   => 'title_'.$i,
+                        'id'   => 'si_home_title_'.$i,
                         'type' => 'text',
                         'std'  => ''
                     ),
                     array(
                         'name' => 'Embed code',
                         'desc' => '',
-                        'id'   => 'embed_code_'.$i,
+                        'id'   => 'si_home_embed_code_'.$i,
                         'type' => 'textarea',
                         'std'  => ''
                     ),
                     array(
                         'name' => 'Image',
                         'desc' => '',
-                        'id'   => 'img_'.$i,
-                        'type' => 'media',
+                        'id'   => 'si_home_img_'.$i,
+                        'type' => 'text',
                         'std'  => ''
                     ),
                     array(
                         'name' => 'Excerpt',
                         'desc' => '',
-                        'id'   => 'excerpt_'.$i,
+                        'id'   => 'si_home_excerpt_'.$i,
                         'type' => 'text',
                         'std'  => ''
                     ),
                     array(
                         'name' => 'Link',
                         'desc' => '',
-                        'id'   => 'link_'.$i,
+                        'id'   => 'si_home_link_'.$i,
                         'type' => 'text',
                         'std'  => ''
                     )
@@ -68,7 +89,7 @@ function home_meta_boxes() {
 
     if( $template_file == 'page-home.php' ) {
         foreach ( $home_meta_boxes as $meta_box ) {
-            $box = new Create_Meta_Box( $meta_box );
+            $box = new CreateMetaBox( $meta_box );
         }
     }
 }

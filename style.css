@@ -1,5 +1,5 @@
 /*
-Theme Name:     Blank Canvas
+Theme Name:     Seeta
 Theme URI:      http://chrisbishop.me.uk/
 Description:    Child theme for the mixfolio theme 
 Author:         Chris Bishop
@@ -17,6 +17,57 @@ License: Creative Commons Attribution-Share Alike 3.0 (http://creativecommons.or
 
 /* =Global
 -------------------------------------------------------------- */
+
+.home .main-outer, .home .main-outer .row {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+}
+
+.home #branding {
+	margin-bottom: 0;
+}
+
+.home section {
+	padding: 20px;
+}
+
+.home .intro {
+	background-color: #222;
+}
+
+.intro p {
+	line-height: 1em;
+}
+
+.intro h1 {
+	color: #fff;
+}
+
+.si-row {
+	width: 100%;
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+.si-row:after, .si-row:before {
+	content: " ";
+	display: table;
+}
+
+.si-row:after {
+	clear: both;
+}
+
+.si-col {
+	width: 50%;
+	float: left;
+}
+
+.si-content {
+	padding: 0 1em;
+}
 
 .videoWrapper {
 	position: relative;

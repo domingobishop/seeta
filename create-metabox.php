@@ -3,7 +3,7 @@
 // Creates meta boxes from $meta_boxes[] = array()
 // See http://www.deluxeblogtips.com/2010/05/howto-meta-box-wordpress.html for more info
 // Edited from original for TNA purposes
-class Create_Meta_Box {
+class CreateMetaBox {
 	protected $_meta_box;
 
 	// create meta box based on given data
@@ -41,16 +41,16 @@ class Create_Meta_Box {
 					if ( ! array_key_exists( 0, $field_value ) ) {
 						array_push( $field_value, '' );
 					}
-					$args        = array(
+					/*$args        = array(
 						'media_buttons' => false,
 						'textarea_rows' => 4,
 						'tinymce'       => false,
 						'quicktags'     => array( 'buttons' => 'strong,em,ul,ol,li,link' ),
 						'wpautop'       => false
 					);
-					wp_editor( $field_value[0], $field['id'], $args );
+					wp_editor( $field_value[0], $field['id'], $args );*/
 					// Please leave this line of code commented out as reference - original code replaced with above.
-					// echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
+					echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>';
 					echo '<br /><p class="howto">', $field['desc'],'</p>';
 					break;
 				case 'select':
