@@ -44,7 +44,7 @@ get_header(); ?>
                 $excerpt  = get_post_meta( $post->ID, 'si_home_excerpt_'.$i, true );
                 $link     = get_post_meta( $post->ID, 'si_home_link_'.$i, true );
 
-                echo home_section( $i, $title, $code );
+                echo home_section( $i, $title, $code, $excerpt );
             }
 
             endwhile; ?>

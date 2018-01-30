@@ -3,6 +3,13 @@
 include 'create-metabox.php';
 
 add_action( 'init', 'home_meta_boxes' );
+add_action( 'wp_enqueue_scripts', 'seeta_styles' );
+
+// Enqueue styles
+function seeta_styles() {
+    wp_register_style( 'seeta-styles', get_stylesheet_directory_uri() . '/seeta.css', array(), '', 'all' );
+    wp_enqueue_style( 'seeta-styles' );
+}
 
 function home_meta_boxes() {
 
@@ -94,7 +101,7 @@ function home_meta_boxes() {
     }
 }
 
-function home_section( $i, $title, $code ) {
+function home_section( $i, $title, $code, $excerpt ) {
 
     if ($i % 2) {
         // Odd
@@ -113,6 +120,9 @@ function home_section( $i, $title, $code ) {
                                 <div class="entry-header">
                                     <h2>'.$title.'</h2>
                                 </div>
+                                <div class="entry-content subheader">
+                                    '.$excerpt.'
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -127,6 +137,9 @@ function home_section( $i, $title, $code ) {
                             <article>
                                 <div class="entry-header">
                                     <h2>'.$title.'</h2>
+                                </div>
+                                <div class="entry-content subheader">
+                                    '.$excerpt.'
                                 </div>
                             </article>
                         </div>
